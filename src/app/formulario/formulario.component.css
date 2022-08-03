@@ -1,0 +1,13 @@
+/*son clases que se agregan automaticamente en los input del formulario*/
+input.ng-valid.ng-touched {
+    border: 1px solid green;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.error {
+    color: tomato;
+    font-size: 12px;
+}

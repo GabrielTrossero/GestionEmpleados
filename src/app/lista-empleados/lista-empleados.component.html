@@ -1,0 +1,21 @@
+<h1>Lista Empleados</h1>
+<div class="empleados">
+    <div class="form-group col-md-2">
+        <label>Filtrar por Departamento</label>
+        <select class="form-control" (change)="onChange($event)">
+            <option value="todos">Todos</option>
+            <option value="informatica">Informatica</option>
+            <option value="marketing">Marketing</option>
+            <option value="contabilidad">Contabilidad</option>
+        </select>
+    </div>
+    <div class="empleado" *ngFor="let empleado of arrEmpleados">
+        <h4>{{empleado.nombre}} {{empleado.apellidos}}</h4>
+        <img [src]="empleado.imagen" alt="">
+        <ul>
+            <li>{{empleado.email}}</li>
+            <li>{{empleado.edad}} años</li>
+            <li>{{empleado.departamento}}</li>
+        </ul>
+    </div>
+</div>
